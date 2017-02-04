@@ -86,7 +86,7 @@ function loadData(data) {
             "dropofftime": parseInt(next.start_time * 1000),
             "hasfare": false
         },
-        sour: {lat: parseFloat(prev.dropLat.toFixed(6)), lon: parseFloat(prev.dropLgn.toFixed(6))},
+        sour: {lat: parseFloat(prev.dropLat.toFixed(6)), lon: parseFloat(next.dropLgn.toFixed(6))},
         dest: {lat: parseFloat(next.pickLat.toFixed(6)), lon: parseFloat(next.pickLgn.toFixed(6))}
       });
       routes.push({
@@ -150,7 +150,7 @@ function loadData(data) {
         "/api/google",
         {
           url: "https://maps.googleapis.com/maps/api/directions/json?origin="
-          + d.sour.lat + "," + d.sour.lon + "&destination=" + d.dest.lat + "," + d.dest.lon + "&key=AIzaSyAgAq2UwINinxgLgNqQ7jvPZd-hLUrU7aY"
+          + d.sour.lat + "," + d.sour.lon + "&destination=" + d.dest.lat + "," + d.dest.lon + "&key=AIzaSyDstiaVLSaOW2DjrNVoF3scNsk-yzSMoZY"
         },
         function (result){
           result = JSON.parse(result);
