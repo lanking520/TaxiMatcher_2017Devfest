@@ -2,22 +2,41 @@ var mongoose = require('mongoose');
 
 // create Stock schema
 var TaxiSchema = new mongoose.Schema({
-    Balance:{
-    	type : Number,
-        min : 0,
-    	required : true
-    },
-    Time:{
+    tpep_pickup_datetime:{
     	type : Date,
     	required : true
     },
-    UserID:{
-        type: String,
+    tpep_dropoff_datetime:{
+    	type : Date,
+    	required : true
+    },
+    passenger_count:{
+        type: Number,
         required : true
     },
-    Type:{
-        type: String,
+   trip_distance:{
+        type: Number,
         required:true
+    },
+    pickup_longitude:{
+    	type : Number,
+    	required : true
+    },
+    pickup_latitudee:{
+    	type : Number,
+    	required : true
+    },
+    dropoff_longitude:{
+    	type : Number,
+    	required : true
+    },
+    dropoff_latitude:{
+    	type : Number,
+    	required : true
+    },
+    total_amount:{
+    	type : Number,
+    	required : true
     }
 });
 
