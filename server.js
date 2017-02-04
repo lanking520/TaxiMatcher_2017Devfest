@@ -26,13 +26,13 @@ app.use(helmet());
 app.use(helmet.noCache());
 
 app.use('/hello',function(req, res, next){
-    res.send('Hello World');
+    res.send('Hello World To Taxi Taxi');
     next();
 });
 
 
 //Connect to MongoDB
-mongoose.connect('mongodb://localhost/meanstock');
+mongoose.connect('mongodb://localhost/taxis');
 mongoose.connection.once('open', function(){
     //load models
     app.models = require('./models/index');

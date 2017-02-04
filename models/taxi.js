@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 // create Stock schema
-var BalanceSchema = new mongoose.Schema({
+var TaxiSchema = new mongoose.Schema({
     Balance:{
     	type : Number,
         min : 0,
@@ -22,4 +22,4 @@ var BalanceSchema = new mongoose.Schema({
 });
 
 // Export the model schema
-module.exports = BalanceSchema;
+module.exports = TaxiSchema;
