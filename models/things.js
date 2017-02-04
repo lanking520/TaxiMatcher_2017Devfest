@@ -3,11 +3,11 @@ var mongoose = require('mongoose');
 // create Stock schema
 var ThingsSchema = new mongoose.Schema({
     tpep_pickup_datetime:{
-    	type : Date,
+    	type : Number,
     	required : true
     },
     tpep_dropoff_datetime:{
-    	type : Date,
+    	type : Number,
     	required : true
     },
     passenger_count:{
