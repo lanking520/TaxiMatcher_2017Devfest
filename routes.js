@@ -1,3 +1,3 @@
 module.exports = {
-    '/taxi' : require('./controllers/TaxiController')
+    '/things' : require('./controllers/ThingsController')
 };

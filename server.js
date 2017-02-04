@@ -32,7 +32,7 @@ app.use('/hello',function(req, res, next){
 
 
 //Connect to MongoDB
-mongoose.connect('mongodb://localhost/taxis');
+mongoose.connect('mongodb://localhost/taxi');
 mongoose.connection.once('open', function(){
     //load models
     app.models = require('./models/index');

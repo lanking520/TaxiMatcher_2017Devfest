@@ -1,3 +1,3 @@
 module.exports = {
-    taxi:require('./taxi.js')
+    things:require('./things.js')
 };

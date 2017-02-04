@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 // create Stock schema
-var TaxiSchema = new mongoose.Schema({
+var ThingsSchema = new mongoose.Schema({
     tpep_pickup_datetime:{
     	type : Date,
     	required : true
@@ -41,4 +41,4 @@ var TaxiSchema = new mongoose.Schema({
 });
 
 // Export the model schema
-module.exports = TaxiSchema;
+module.exports = ThingsSchema;
