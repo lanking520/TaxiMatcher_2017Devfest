@@ -9,3 +9,6 @@ Data Analyser:  Ji Shen   Minghao Dong
 
 ## Objectives:
 Provide the taxi driver as much resources as he could get based on his current location and time.
+
+## Bug tracer
+
