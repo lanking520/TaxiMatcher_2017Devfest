@@ -1,4 +1,4 @@
-var timeFactor = 5; //number of minutes in real life to a second in the viz
+var timeFactor = 0.005; //number of minutes in real life to a second in the viz
 $('.timeFactor').html(timeFactor); //Displays the timeFactor in the UI.
 var tweenToggle = 0;
 
@@ -82,11 +82,11 @@ function loadData(data) {
         "properties": {
             "passengers": "1",
             "total": "0",
-            "pickuptime": prev.drop_time,
-            "dropofftime": next.start_time,
+            "pickuptime": parseInt(prev.drop_time * 1000),
+            "dropofftime": parseInt(next.start_time * 1000),
             "hasfare": false
         },
-        sour: {lat: parseFloat(prev.dropLat.toFixed(6)), lon: parseFloat(next.dropLgn.toFixed(6))},
+        sour: {lat: parseFloat(prev.dropLat.toFixed(6)), lon: parseFloat(prev.dropLgn.toFixed(6))},
         dest: {lat: parseFloat(next.pickLat.toFixed(6)), lon: parseFloat(next.pickLgn.toFixed(6))}
       });
       routes.push({
@@ -94,8 +94,8 @@ function loadData(data) {
         "properties": {
             "passengers": "1",
             "total": next.total,
-            "pickuptime": next.start_time,
-            "dropofftime": next.drop_time,
+            "pickuptime": parseInt(next.start_time),
+            "dropofftime": parseInt(next.drop_time),
             "hasfare": true
         },
         sour: {lat: parseFloat(next.pickLat.toFixed(6)), lon: parseFloat(next.pickLgn.toFixed(6))},
@@ -289,7 +289,7 @@ function intialization(data) {
               //calculate seconds
               var start = d.properties.pickuptime,
               finish = d.properties.dropofftime,
-              duration = 1000 * (finish - start);
+              duration = (finish - start);
 
               duration = duration/60000; //convert to minutes
 
