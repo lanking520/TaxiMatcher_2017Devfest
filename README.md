@@ -1,6 +1,7 @@
 # TaxiMatcher_2017Devfest
 
 Software Developer:  Qing Lan  Zehao Song
+
 Data Analyser:  Ji Shen   Minghao Dong
 
 ## Taxi Matcher
@@ -10,5 +11,9 @@ Data Analyser:  Ji Shen   Minghao Dong
 ## Objectives:
 Provide the taxi driver as much resources as he could get based on his current location and time.
 
-## Bug tracer
+##
+FrontEnd using box.js and d3.js
 
+BackEnd using Python Flask and MongoDB
+
+Data Analysis using Clustering
